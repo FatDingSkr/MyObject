@@ -1,0 +1,27 @@
+html, body, div, ul, ol, dl, dt, dd, p, img, h1, h2, h3, h4, h5, h6, fieldset, legend, img, form {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, dl {
+  list-style: none; }
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: 100; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+em, i {
+  font-style: normal; }
+
+fieldset, img {
+  border: 0; }
+
+.clear:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden; }
