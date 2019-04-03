@@ -264,3 +264,75 @@
     display: inline-block;
     margin-top: 10px;
     margin-right: 10px; }
+
+/* 首页下拉 */
+.hover_list {
+  width: 1349px;
+  height: 266px;
+  border: 1px solid #ccc; }
+  .hover_list ul {
+    margin: 0 auto;
+    width: 1220px;
+    height: 266px;
+    display: flex;
+    justify-content: center; }
+    .hover_list ul li {
+      float: left;
+      width: 110px;
+      padding-right: 100px; }
+      .hover_list ul li h3 {
+        font-size: 12px;
+        opacity: 0.5;
+        color: #000;
+        font-weight: 700;
+        cursor: default;
+        margin: 20px 0; }
+      .hover_list ul li a {
+        display: block;
+        height: 50px;
+        position: relative; }
+        .hover_list ul li a span {
+          display: inline-block;
+          position: absolute;
+          left: 50px;
+          bottom: 20px;
+          font-size: 12px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.8); }
+
+/*下拉手机 下拉足迹*/
+.hover_list_right {
+  width: 1349px;
+  height: 266px;
+  border: 1px solid #ccc; }
+  .hover_list_right ul {
+    display: flex;
+    justify-content: center; }
+    .hover_list_right ul li {
+      width: 130px;
+      margin: 40px 10px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .hover_list_right ul li a {
+        display: block;
+        width: 120px; }
+        .hover_list_right ul li a h2 {
+          font-size: 14px;
+          color: #333;
+          font-weight: 700;
+          width: 120px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap; }
+        .hover_list_right ul li a span {
+          font-size: 14px;
+          color: red;
+          font-weight: 700; }
+        .hover_list_right ul li a i {
+          font-size: 12px;
+          color: gray;
+          font-weight: 700;
+          display: inline-block;
+          margin: 10px  0 0 5px; }
