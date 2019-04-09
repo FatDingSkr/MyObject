@@ -1,5 +1,9 @@
 @charset "UTF-8";
+body {
+  background-color: #ececec; }
+
 .header {
+  /*z-index: 99;*/
   width: 1349px;
   line-height: 45px;
   height: 45px;
@@ -75,15 +79,23 @@
 .nav {
   width: 1349px;
   height: 74px;
-  border-bottom: 1px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1;
+  /*z-index:5;*/
+  line-height: 74px;
+  background-color: #fff;
+  position: relative;
+  z-index: 99; }
 
 .nav .nav_list {
   float: left;
   margin-left: 65px;
-  line-height: 74px; }
+  /*position: relative;*/ }
 
 .nav .nav_search {
   float: right; }
+
+.nav .nav_ul {
+  /*margin-top: 27px*/ }
 
 .nav ul li {
   float: left; }
@@ -168,6 +180,15 @@
   font-size: 20px;
   color: #ccc; }
 
+/*下拉菜单*/
+.list_box {
+  /*display: block;*/
+  position: absolute;
+  top: 75px;
+  z-index: 99;
+  background-color: red;
+  opacity: 0; }
+
 /* 底部 */
 .bottom {
   border-top: 1px solid #e6e6e6; }
@@ -205,7 +226,8 @@
   float: right; }
 
 .contact_way ul {
-  position: relative; }
+  position: relative;
+  z-index: -1; }
 
 .contact_way ul li {
   text-align: right; }
@@ -235,7 +257,8 @@
   margin-top: 10px;
   margin-right: 0;
   position: absolute;
-  right: 0; }
+  right: 0;
+  z-index: -1; }
 
 .contact_way li a span {
   color: #5079d9;
@@ -269,7 +292,10 @@
 .hover_list {
   width: 1349px;
   height: 266px;
-  border: 1px solid #ccc; }
+  /*border:1px solid #ccc;*/
+  /*position: relative;*/
+  display: none;
+  background-color: #fff; }
   .hover_list ul {
     margin: 0 auto;
     width: 1220px;
@@ -304,7 +330,10 @@
 .hover_list_right {
   width: 1349px;
   height: 266px;
-  border: 1px solid #ccc; }
+  /*border:1px solid #ccc;*/
+  /*position: relative;*/
+  display: none;
+  background-color: #fff; }
   .hover_list_right ul {
     display: flex;
     justify-content: center; }
@@ -336,3 +365,195 @@
           font-weight: 700;
           display: inline-block;
           margin: 10px  0 0 5px; }
+
+/*轮播图*/
+.banner {
+  width: 1220px;
+  margin: 25px auto;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  /*z-index: 1;*/ }
+  .banner ul {
+    position: absolute; }
+    .banner ul li {
+      width: 1220px;
+      height: 500px; }
+      .banner ul li a img {
+        width: 100%;
+        height: 100%; }
+  .banner .banner_bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 600px; }
+    .banner .banner_bottom a {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: gray;
+      cursor: pointer;
+      margin: 0 5px;
+      border: 1px solid #ccc; }
+    .banner .banner_bottom .active {
+      background-color: #fff; }
+
+/*上四件套*/
+.four_piece .four_box {
+  width: 1220px;
+  height: 203px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 25px; }
+  .four_piece .four_box li {
+    float: left;
+    width: 304px;
+    height: 202px;
+    border-right: 1px solid #ccc;
+    opacity: 0.85; }
+    .four_piece .four_box li:hover {
+      opacity: 1; }
+    .four_piece .four_box li:last-child {
+      border-right: 0; }
+    .four_piece .four_box li a img {
+      width: 100%;
+      height: 100%; }
+
+/*热门商品*/
+.hot_commodities {
+  width: 1220px;
+  height: 489px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .hot_commodities .hot_top {
+    width: 1218px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff; }
+    .hot_commodities .hot_top h3 {
+      float: left;
+      font-weight: 700;
+      margin-left: 25px;
+      color: #666; }
+    .hot_commodities .hot_top .button_box {
+      float: right;
+      margin-right: 20px; }
+      .hot_commodities .hot_top .button_box a {
+        display: inline-block;
+        margin: 18px 5px 0 5px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 20px;
+        color: #474747;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        text-align: center; }
+        .hot_commodities .hot_top .button_box a:first-child {
+          cursor: not-allowed;
+          opacity: .3; }
+      .hot_commodities .hot_top .button_box .active {
+        opacity: .3; }
+  .hot_commodities .hot_goods {
+    background-color: #fff;
+    overflow: hidden;
+    width: 2440px;
+    height: 489px;
+    position: relative;
+    /*left: -1220px;	*/ }
+    .hot_commodities .hot_goods li {
+      float: left;
+      width: 304px;
+      height: 429px;
+      text-align: center;
+      background-color: #fff;
+      border-right: 1px solid #ccc;
+      position: relative;
+      opacity: 0.9; }
+      .hot_commodities .hot_goods li:hover {
+        background-color: #f9f9f9;
+        opacity: 1; }
+      .hot_commodities .hot_goods li:last-child {
+        border-right: 0; }
+      .hot_commodities .hot_goods li a {
+        display: inline-block;
+        position: absolute;
+        display: none;
+        width: 216px;
+        height: 216px;
+        padding: 45px 0 20px 0;
+        left: 45px; }
+        .hot_commodities .hot_goods li a img {
+          width: 100%;
+          height: 100%；; }
+      .hot_commodities .hot_goods li .show {
+        display: block; }
+      .hot_commodities .hot_goods li div {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        margin: 0 auto; }
+        .hot_commodities .hot_goods li div h3 {
+          line-height: 1.2;
+          font-size: 14px;
+          color: #333;
+          font-weight: 700;
+          margin: 0 8px; }
+        .hot_commodities .hot_goods li div span {
+          display: block;
+          margin-bottom: 10px;
+          overflow: hidden;
+          padding-top: 15px;
+          font-size: 12px;
+          line-height: 1.2;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #999; }
+        .hot_commodities .hot_goods li div p {
+          font-family: Arial;
+          color: #d44d44;
+          font-weight: 700;
+          margin-top: 10px; }
+        .hot_commodities .hot_goods li div .hot_goods_color {
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          position: relative; }
+          .hot_commodities .hot_goods li div .hot_goods_color li {
+            float: left;
+            width: 12px;
+            height: 12px;
+            line-height: 12px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 1px solid #666; }
+            .hot_commodities .hot_goods li div .hot_goods_color li img {
+              width: 100%;
+              height: 100%; }
+          .hot_commodities .hot_goods li div .hot_goods_color .active {
+            border: 1px solid gray; }
+      .hot_commodities .hot_goods li .detail {
+        display: none;
+        width: 98px;
+        height: 28px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        line-height: 28px;
+        height: 28px;
+        text-align: center;
+        color: #646464;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        position: absolute;
+        left: 100px;
+        bottom: 40px;
+        cursor: pointer; }

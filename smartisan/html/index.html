@@ -6,6 +6,12 @@
 	<link rel="stylesheet" type="text/css" href="../css/index.css">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src = "../js/jquery-1.10.1.min.js"></script>
+	<script src = "../js/index.js"></script>
+	<script src = "../js/jquery.cookie.js"></script>	
+	<script src = "../js/parabola.js"></script>	
+	
+
 </head>
 <body>
 	<!-- header -->
@@ -33,10 +39,13 @@
 	</div>
 
 	<!-- 导航栏 -->
-	<div class="nav enable">
+	<div class="nav" >
 		<div class="nav_list">
-			<ul>
-				<li><a href="">首页</a></li>
+			<ul class="nav_ul">
+				<li>
+					<a href="">首页</a>
+					
+				</li>
 				<li><a href="">手机</a></li>
 				<li><a href="">“足迹”系列</a></li>
 				<li><a href="">官方配件</a></li>
@@ -46,8 +55,301 @@
 				<li><a href="">服务</a></li>
 				<li><a href="">企业团购</a></li>
 			</ul>
+			<div class="list_box">
+	<!-- 首页-下拉 -->
+		<div class="hover_list home_list">
+			<ul>
+				<li>
+					<h3>手机</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>坚果U系列</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/2077bb9819a652c36da473f379fe510b.png?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>坚果R系列</span>
+					</a>
+				</li>
+				<li>
+					<h3>官方配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/3a7522290397a9444d7355298248f197.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>保护膜</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/9f4be2ba6df58ad8c3017d3811d31de5.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>保护套</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/90be7779c2454407ee5f4b6184c929ed.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>耳机</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/6e96ccea3bd56bdd2243eb20330cec30.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>音箱</span>
+					</a>
+					
+				</li>
+				<li>
+					<h3 style="visibility: hidden;">aaa</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/82aab62886740f165a3631ce6cffe895.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>数据线</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>充电器</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b9e61c6d93464454fa2e382632e34cee.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>自拍杆</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/afcec520933673b8e03a867e6502f6e0.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>移动电源</span>
+					</a>
+				</li>
+				<li>
+					<h3>畅呼吸系列</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>生活电器</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>配件</span>
+					</a>
+				</li>
+				<li>
+					<h3>服饰箱包</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/448a7daa2ea1fbf3cdb4bafe0c557dfa.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>服装</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/1db1a8bfee3623fded41c9115b5a5335.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>鞋</span>
+					</a>
+				</li>
+			</ul>
 		</div>
-		<div class="nav_search">
+		<!-- 手机下拉 -->
+		<div class="hover_list_right phone_list">
+			<ul>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/17f254e6f809355d8fe66260ccb48fb0.png?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果R1</h2>
+						<span>￥2999.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果R1</h2>
+						<span>￥2999.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果Pro 2S</h2>
+						<span>￥1798.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/718bcecced0df1cd23bbdb9cc1f70b7d.png?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果3</h2>
+						<span>￥1299.00</span><i>起</i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hover_list_right footmark">
+			<ul>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b131fc5cf413f9f520ddd5f9cc7104cb.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 《惊魂记》在美国首演</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/3f2267a2d47b2a64c7956a049a4264c8.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 《小王子》作者出生</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/cf66ff5583c6c0faa3355d791d291d43.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 电子游戏《俄罗斯方块》发布</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/a168ac0c47e2b07458d8a378c332ce65.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 人类首次登上月球</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/e03e957c19f121a9a8e453e6e27b08a8.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 滑翔机之父李林塔尔出生</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/780b429d634afcbeeefd549955814144.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
+						<h2>坚果 R1“足迹”系列保护套 人类首次登顶珠峰</h2>
+						<span>￥99.00</span><i>起</i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hover_list accessories_list">
+			<ul>
+				<li>
+					<h3>手机保护配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/3f2267a2d47b2a64c7956a049a4264c8.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>手机壳</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/3a7522290397a9444d7355298248f197.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>手机膜</span>
+					</a>
+				</li>
+				<li>
+					<h3>耳机</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/110ef73bbe87d01d0e958f9c85d1c566.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>蓝牙耳机</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/72e4c31e4e623f5c37c6489f6d91efc6.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>线控耳机</span>
+					</a>
+				</li>
+				<li>
+					<h3>手机充电配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/c79a73ffc6f8e782160d978f49f543dc.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>数据线</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>充电器</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/afcec520933673b8e03a867e6502f6e0.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>移动电源</span>
+					</a>
+				</li>
+				<li>
+					<h3>自拍杆</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b9e61c6d93464454fa2e382632e34cee.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>自拍杆</span>
+					</a>
+				</li>
+				<li>
+					<h3>音箱</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/c44f0ab4da5591fc3d0f82b7ac0f4f65.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>音箱</span>
+					</a>
+				</li>
+				<li>
+					<h3>车载配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/9ab9c385c8669303812ae557ba17c682.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>车载支架</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hover_list breath_list">
+			<ul>
+				<li>
+					<h3>生活电器</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>空气净化器</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/2dc9a41577bee7f9d6c54365f542509e.png?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>加湿器</span>
+					</a>
+				</li>
+				<li>
+					<h3>生活电器配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>净化器滤芯</span>
+					</a>
+				</li>
+				<li>
+					<h3>个人防护</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/b9c502d4f1a410e2eca1dff3f2b1e47e.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>口罩</span>
+					</a>
+				</li>
+				<li>
+					<h3>车载电器配件</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/5877379e07e53c818f8446ce7b52fbd3.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>车载滤清器</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="hover_list around_list">
+			<ul>
+				<li>
+					<h3>服饰</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/f22ebcf95ea6b51e6299c46dc83be84a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>T恤</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/4a3af52ae7f6e93292668002767b6234.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>衬衫</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/daa975651d6d700c0f886718c520ee19.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>POLO衫</span>
+					</a>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/378bc572fe4e5384698c70028efe81ef.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>卫衣</span>
+					</a>
+				</li>
+				<li>
+					<h3>鞋</h3>
+					<a href="">
+						<img src="" alt="">
+						<span>帆布鞋</span>
+					</a>
+				</li>
+				<li>
+					<h3>小标题</h3>
+					<a href="">
+						<img src="https://resource.smartisan.com/resource/84249736232ef42165f20e306a186314.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
+						<span>记事本</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+		</div>
+		<div class="nav_search enable">
 			<form action="">
 				<div class="search_box">
 					<div class="iconfont_box"><a href="" class="iconfont">&#xe624;</a></div>
@@ -57,33 +359,76 @@
 				</div>
 			</form>
 		</div>
-	</div>
-	<!-- 滑动样式 -->
-	<div class="nav disable">
-		<div class="nav_list">
-			<ul>
-				<li><a href="">首页</a></li>
-				<li><a href="">手机</a></li>
-				<li><a href="">“足迹”系列</a></li>
-				<li><a href="">官方配件</a></li>
-				<li><a href="">畅呼吸</a></li>
-				<li><a href="">品牌周边</a></li>
-				<li><a href="">智能音箱</a></li>
-				<li><a href="">服务</a></li>
-				<li><a href="">企业团购</a></li>
-			</ul>
-		</div>
-		<div class="header_aside">
+		<!-- 用户登录 -->
+		<div class="header_aside disable">
 			<ul>
 				<li class="aside_user iconfont"><a href="">&#xe61a;</a></li>
 				<li class="aside_shoppingCart iconfont"><a href="">&#xe879;</a></li>
 			</ul>
-			<div class="sc"></div>
+			<!-- 购物车 -->
+			<div class="sc">
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- banner -->
+	<div class="banner">
+		
+		<ul>
+			<li><a href=""><img src="../images/banner/banner1_02.png" alt=""></a></li>
+			<li><a href=""><img src="../images/banner/banner2_02.png" alt=""></a></li>
+			<li><a href=""><img src="../images/banner/banner1_02.png" alt=""></a></li>
+			
+			
+		</ul>
+		<div class="banner_bottom">
+				<a class="btn1"></a>
+				<a class="btn2"></a>
 		</div>
 	</div>
+	<!-- top_four 四件套上 -->
+	<div class="top_four four_piece">
+		<ul class="four_box top_four_box">
+			
+		</ul>
+	</div>
 
-	
+	<!-- 热门商品 -->
+	<div class="hot_commodities">
+		<div class="hot_top">
+			<h3>热门商品</h3>
+			<div class="button_box">
+				<a href="" class="iconfont">&#xe504;</a>
 
+				<a href="" class="iconfont">&#xe502;</a>
+			</div>
+		</div>
+		<ul class="hot_goods">
+			<!-- <li>
+				<a href=""><img src="https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png?x-oss-process=image/resize,w_216/format,webp"" alt=""></a>
+				<div>
+				<h3>坚果Pro 2S</h3>
+				<span>双系统，无限屏</span>
+				<ul class="hot_goods_color">
+					<li><img src="https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png?x-oss-process=image/resize,w_20"" alt=""></li>
+				</ul>
+				<p>￥2,298.00</p>
+				</div>
+				<div class="detail">
+					查看详情
+				</div>
+			</li>
+			 -->
+		</ul>
+	</div>
+	<!-- 四件套下 -->
+	<div class="bottom_four four_piece">
+		<ul class="four_box bottom_four_box">
+			
+		</ul>
+	</div>
 	<!-- bottom -->
 	<div class="bottom">
 		<div class="bottom_box">
@@ -172,296 +517,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- 首页-下拉 -->
-	<div class="hover_list home_list">
-		<ul>
-			<li>
-				<h3>手机</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>坚果U系列</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/2077bb9819a652c36da473f379fe510b.png?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>坚果R系列</span>
-				</a>
-			</li>
-			<li>
-				<h3>官方配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/3a7522290397a9444d7355298248f197.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>保护膜</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/9f4be2ba6df58ad8c3017d3811d31de5.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>保护套</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/90be7779c2454407ee5f4b6184c929ed.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>耳机</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/6e96ccea3bd56bdd2243eb20330cec30.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>音箱</span>
-				</a>
-				
-			</li>
-			<li>
-				<h3 style="visibility: hidden;">aaa</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/82aab62886740f165a3631ce6cffe895.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>数据线</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>充电器</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b9e61c6d93464454fa2e382632e34cee.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>自拍杆</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/afcec520933673b8e03a867e6502f6e0.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>移动电源</span>
-				</a>
-			</li>
-			<li>
-				<h3>畅呼吸系列</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>生活电器</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>配件</span>
-				</a>
-			</li>
-			<li>
-				<h3>服饰箱包</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/448a7daa2ea1fbf3cdb4bafe0c557dfa.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>服装</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/1db1a8bfee3623fded41c9115b5a5335.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>鞋</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<!-- 手机下拉 -->
-	<div class="hover_list_right phone_list">
-		<ul>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/17f254e6f809355d8fe66260ccb48fb0.png?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果R1</h2>
-					<span>￥2999.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果R1</h2>
-					<span>￥2999.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果Pro 2S</h2>
-					<span>￥1798.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/718bcecced0df1cd23bbdb9cc1f70b7d.png?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果3</h2>
-					<span>￥1299.00</span><i>起</i>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div class="hover_list_right footmark">
-		<ul>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b131fc5cf413f9f520ddd5f9cc7104cb.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 《惊魂记》在美国首演</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/3f2267a2d47b2a64c7956a049a4264c8.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 《小王子》作者出生</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/cf66ff5583c6c0faa3355d791d291d43.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 电子游戏《俄罗斯方块》发布</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/a168ac0c47e2b07458d8a378c332ce65.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 人类首次登上月球</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/e03e957c19f121a9a8e453e6e27b08a8.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 滑翔机之父李林塔尔出生</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/780b429d634afcbeeefd549955814144.jpg?x-oss-process=image/resize,w_126/format,webp" alt="">
-					<h2>坚果 R1“足迹”系列保护套 人类首次登顶珠峰</h2>
-					<span>￥99.00</span><i>起</i>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div class="hover_list accessories_list">
-		<ul>
-			<li>
-				<h3>手机保护配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/3f2267a2d47b2a64c7956a049a4264c8.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>手机壳</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/3a7522290397a9444d7355298248f197.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>手机膜</span>
-				</a>
-			</li>
-			<li>
-				<h3>耳机</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/110ef73bbe87d01d0e958f9c85d1c566.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>蓝牙耳机</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/72e4c31e4e623f5c37c6489f6d91efc6.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>线控耳机</span>
-				</a>
-			</li>
-			<li>
-				<h3>手机充电配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/c79a73ffc6f8e782160d978f49f543dc.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>数据线</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/dc53bd870ee64d2053ecc51750ece43a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>充电器</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/afcec520933673b8e03a867e6502f6e0.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>移动电源</span>
-				</a>
-			</li>
-			<li>
-				<h3>自拍杆</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b9e61c6d93464454fa2e382632e34cee.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>自拍杆</span>
-				</a>
-			</li>
-			<li>
-				<h3>音箱</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/c44f0ab4da5591fc3d0f82b7ac0f4f65.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>音箱</span>
-				</a>
-			</li>
-			<li>
-				<h3>车载配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/9ab9c385c8669303812ae557ba17c682.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>车载支架</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div class="hover_list breath_list">
-		<ul>
-			<li>
-				<h3>生活电器</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/71432ad30288fb860a4389881069b874.png?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>空气净化器</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/2dc9a41577bee7f9d6c54365f542509e.png?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>加湿器</span>
-				</a>
-			</li>
-			<li>
-				<h3>生活电器配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/4d83d72c5ecc288e8d5ddd9d06b80f99.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>净化器滤芯</span>
-				</a>
-			</li>
-			<li>
-				<h3>个人防护</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/b9c502d4f1a410e2eca1dff3f2b1e47e.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>口罩</span>
-				</a>
-			</li>
-			<li>
-				<h3>车载电器配件</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/5877379e07e53c818f8446ce7b52fbd3.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>车载滤清器</span>
-				</a>
-			</li>
-		</ul>
-	</div>
-	<div class="hover_list around_list">
-		<ul>
-			<li>
-				<h3>服饰</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/f22ebcf95ea6b51e6299c46dc83be84a.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>T恤</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/4a3af52ae7f6e93292668002767b6234.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>衬衫</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/daa975651d6d700c0f886718c520ee19.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>POLO衫</span>
-				</a>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/378bc572fe4e5384698c70028efe81ef.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>卫衣</span>
-				</a>
-			</li>
-			<li>
-				<h3>鞋</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/1db1a8bfee3623fded41c9115b5a5335.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>帆布鞋</span>
-				</a>
-			</li>
-			<li>
-				<h3>小标题</h3>
-				<a href="">
-					<img src="https://resource.smartisan.com/resource/84249736232ef42165f20e306a186314.jpg?x-oss-process=image/resize,w_40/format,webp" alt="">
-					<span>记事本</span>
-				</a>
-			</li>
-		</ul>
-	</div>
+	
 </body>
 </html>

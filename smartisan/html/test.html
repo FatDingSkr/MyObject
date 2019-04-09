@@ -4,11 +4,145 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="../iconfont/iconfont.css">
+	<script src = "../js/jquery-1.10.1.min.js"></script>
 	<style type="text/css">
-		.iconfont{color: #fff;font-size: 20px;background-color: black}
+		.iconfont{width: 100px;height: 100px;background-color: red;display: none}
 	</style>
+	<script>
+		$(function(){
+			/*$(".btn").hover(function(){
+
+				$(".iconfont").css("display","block").slideDown(1000);
+			},function(){
+				$(".iconfont").css("display","none").slideUp(1000);
+			})*/
+
+			// var arr = [{img:"../images/banner/banner1_02.png"},{img:"../images/banner/banner2_02.png"}];
+			// alert(JSON.stringify(arr));
+			
+/*
+			var arr = [{img:"https://resource.smartisan.com/resource/d92367ef8045b931e4319dfc63a54316.jpg?x-oss-process=image/format,jpg/quality,Q_100"},{img:"https://resource.smartisan.com/resource/3311d2d535ece2f8bf8380530ddd4ef8.jpg?x-oss-process=image/format,jpg/quality,Q_100"},{img:"https://resource.smartisan.com/resource/3c9489bedef473d26af2ffa15d4b114f.jpg?x-oss-process=image/format,jpg/quality,Q_100"},{img:"https://resource.smartisan.com/resource/5221521ce5dd54d787e43ab28c8b9168.jpg?x-oss-process=image/format,jpg/quality,Q_100"}];*/
+
+			// 热门商品
+			/*var arr = [{
+				title:"坚果Pro 2S",
+				desc:"双系统，无限屏",
+				price:"￥2,298.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/2f2afca6f88e3aef5b1f332ea0c1d65a.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000517/3C85C069DF7EDB21B2E5ECFA4C684803/origin.png?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/b07b9765e272f866da6acda4ee107d88.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000517/4E69E03CE93DC22F42A905057FB7CB95/origin.png?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/25cc6e783a664fbdf83c3c34774a9826.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000517/099DCE469DCB49B6D2580989AA0B5851/origin.png?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/6668df0e297bf04702df6d166091ac51.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000517/CA9FDE02CD273B061A4370946EF3B48C/origin.png?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:"坚果 R1",
+				desc:'次世代旗舰手机，内脏来自未来的电脑""',
+				price:"￥4,999.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/06c2253354096f5e9ebf0616f1af2086.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/3a2977aae968cc8fc651afddc606d545.jpg?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/efb9aacaab54e8a7fe5bbfbe8979adcd.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/17b760796d75b10a7a138a4e6afd1b6a.jpg?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/17f254e6f809355d8fe66260ccb48fb0.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/32cf93592121641ffc692e4b3ec54900.jpg?x-oss-process=image/resize,w_20"
+				}]
+
+			},
+			{
+				title:"畅呼吸智能空气净化器·标准版",
+				desc:"超强净化能力、超低噪音、超长寿命",
+				price:"￥3,499.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/6ff92d05a3bfab4fad489ca04d3eea5a.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/e647e77234f9ed0fde9dd4084d35ff57.jpg?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:"畅呼吸智能落地式加湿器",
+				desc:"健康无雾、高效加湿、超低噪音",
+				price:"￥1,999.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/2dc9a41577bee7f9d6c54365f542509e.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/e647e77234f9ed0fde9dd4084d35ff57.jpg?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:"Smartisan 卫衣 圆领 老友记",
+				desc:"风格简介、舒适服帖",
+				price:"￥199.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/fa25116df765cdbe469d31cb1a5d8c13.jpg?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/bf1fbd3de44ee3ae65d7b0daa7343cb4.jpg?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:'坚果"电池型电池"移动电源',
+				desc:'别具一格的"全能型"移动电源',
+				price:"￥49.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/afcec520933673b8e03a867e6502f6e0.jpg?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/73ed9b2a0a26e7476e5246245eef31c1.jpg?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:"坚果 Pro 2 特别版",
+				desc:"漂亮的不像实力派",
+				price:"￥1,899.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/84366aa98fd0659d7809e1b9eed62cb4.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000479/6835AD084B4CE188877FFAFA10339944/origin.png?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/574abf59d5cfd440d8370eb99118c44a.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000479/6CF45CDABAF3B549B82C10A50BDBEF39/origin.png?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/cb762c4e848239e3173f2d1eb94c9628.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000479/97BBF007C06CF961411BC376A98C586D/origin.png?x-oss-process=image/resize,w_20"
+				}]
+			},
+			{
+				title:"坚果3",
+				desc:"漂亮的不像实力派",
+				price:"$1,299.00",
+				img:[{
+					src:"https://resource.smartisan.com/resource/fac4130efc39ed4db697cc8d137890e9.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/5caf3839a12977a793f942c3643002b7.jpg?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/91dc3f577960e30ca11b632e7b6ebd0f.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000406/43746150B54679088441A2F16E865312/origin.jpg?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/13e91511f6ba3227ca5378fd2e93c54b.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000406/464C39B2C7BF66E6EDA4B6283D7100ED/origin.jpg?x-oss-process=image/resize,w_20"
+				},{
+					src:"https://resource.smartisan.com/resource/61586b59793ac16bd973010aecad2ca9.png?x-oss-process=image/resize,w_216/format,webp",
+					color:"https://resource.smartisan.com/resource/attr/v2/1000406/50815AFA956E08CF8DC6683DF06FFDDE/origin.jpg?x-oss-process=image/resize,w_20"
+				}]
+			}]*/
+
+			var arr = [{
+				img:"https://resource.smartisan.com/resource/f82c9e2774ce0e391a17f1b20c1e0c90.jpg?x-oss-process=image/resize,w_304/format,jpg/quality,Q_100"
+			},{
+				img:"https://resource.smartisan.com/resource/5ea6f0905535d7b11258e9a0f9b1abeb.jpg?x-oss-process=image/resize,w_304/format,jpg/quality,Q_100"
+			},{
+				img:"https://resource.smartisan.com/resource/509151eb8ee49b5ffb3a8a7496c30924.jpg?x-oss-process=image/resize,w_304/format,jpg/quality,Q_100"
+			},{
+				img:"https://resource.smartisan.com/resource/m/minibanner_03.jpg?x-oss-process=image/resize,w_304/format,jpg/quality,Q_100"
+			}]
+			console.log(JSON.stringify(arr));
+		})
+	</script>
 </head>
 <body>
-	<div class="iconfont">&#xe501;</div>
+	<button class="btn">按钮</button>
+	<div class="iconfont"></div>
 </body>
 </html>
